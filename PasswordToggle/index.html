@@ -14,7 +14,7 @@
 
 
     <script>
-        let eyeicon = document.getElementById("eyeicon");
+        /*let eyeicon = document.getElementById("eyeicon");
         let password = document.getElementById("password");
 
         eyeicon.onclick = function(){
@@ -26,7 +26,17 @@
                 password.type="password";
                 eyeicon.src="eye-close.png";
             }
-        }
+        }*/
+        document.getElementById("eyeicon").addEventListener("click", function() {
+            const password = document.getElementById("password");
+            if (password.type === "password") {
+                password.type = "text";
+                this.src = "eye-open.png";
+            } else {
+                password.type = "password";
+                this.src = "eye-close.png";
+            }
+        });
     </script>
 </body>
 </html>
